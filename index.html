@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Decodificador de Textos">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Decodificador de Textos</title>
+</head>
+
+<body>
+    <section id="header" class="header">
+        <img src="/assets/img/logo-alura.svg" alt="logo da Alura" class="logo">
+    </section>
+    <section id="corpo" class="corpo">
+        <div class="secao-input-pergunta">
+            <div class="cx-txt">
+                <textarea placeholder="Digite seu texto aqui" class="input-cx-txt" id="texto" cols="30"
+                    rows="10"></textarea>
+            </div>
+            <div class="paragrafo">
+                <i class="material-icons">&#xe000;</i>
+                <p>Apenas letras minúsculas e sem acentos.</p>
+            </div>
+            <div class="botoes">
+                <input type="button" id="btn-crip" class="button btn-crip" value="Criptografar">
+                <input type="button" id="btn-desc" class="button btn-desc" value="Descriptografar">
+            </div>
+        </div>
+
+        <div class="secao-display-resposta">
+
+            <div class="exibir-txt">
+                <div id="cx-exibir-txt" class="cx-exibir-txt">
+                    <h2>Nenhuma mensagem encontrada</h2>
+                    <p>Digite um texto que você deseja criptografar.</p>
+                </div>
+                <input type="button" id="btn-copiar" class="button btn-copiar" value="Copiar">
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
