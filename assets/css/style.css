@@ -1,0 +1,95 @@
+@import url(normalize.css);
+@import url(variaveis.css);
+
+body {
+    font-family: var(--fonte);
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: var(--light-blue-100);
+}
+
+.logo {
+    margin: 20px 20px;
+
+}
+
+.corpo {
+    padding: 20px;
+}
+
+.input-cx-txt {
+    width: 100%;
+    background-color: var(--light-blue-100);
+    border-color: var(--light-blue-300);
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+
+}
+
+textarea::placeholder {
+    color: var(--dark-blue-300);
+}
+
+.paragrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.vermelho {
+    color: red;
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.botoes {
+    margin-top: 20px;
+    margin: 30px 0;
+}
+
+.button {
+    width: 100%;
+    padding: 24px 24px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-crip {
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+    font-weight: 400;
+}
+
+.btn-desc {
+    background-color: var(--light-blue-100);
+}
+
+.exibir-txt,
+.cx-exibir-txt {
+    border-radius: 25px;
+    background-color: var(--white);
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+.cx-exibir-txt.shaking {
+    animation: shake 0.4s ease-in-out infinite;
+}
+
+.btn-copiar {
+    display: none;
+    margin-top: 10px;
+    width: 90%;
+    background-color: var(--white);
+}
