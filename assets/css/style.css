@@ -93,3 +93,48 @@ h2 {
     width: 90%;
     background-color: var(--white);
 }
+
+@media screen and (min-width: 768px) {
+
+    .body {
+        padding: 50px;
+    }
+
+    .input-cx-txt {
+        width: 100%;
+    }
+
+    .botoes {
+        display: flex;
+
+        height: 67px;
+
+    }
+
+    .button {
+        width: 90%;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .corpo {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .secao-input-pergunta {
+        width: 70%;
+    }
+
+    .secao-display-resposta {
+        width: 25%;
+    }
+
+    textarea::placeholder {
+        row
+    }
+
+}
