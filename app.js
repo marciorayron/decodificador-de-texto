@@ -56,6 +56,11 @@ function exibirBotaoCopiar() {
     btnCopiar.style.display = 'inline-block';
 }
 
+function naoExibirImgGaroto(){
+    let imgGaroto = document.getElementById('img-garoto');
+    imgGaroto.style.display = 'none';
+}
+
 document.getElementById('btn-crip').addEventListener('click', function () {
     let texto = document.getElementById('texto').value.trim();
     if (!validarEExibirAviso(texto)) {
@@ -64,6 +69,8 @@ document.getElementById('btn-crip').addEventListener('click', function () {
     let textoCriptografado = criptografarTexto(texto);
     document.getElementById('cx-exibir-txt').textContent = textoCriptografado;
     exibirBotaoCopiar();
+    naoExibirImgGaroto();
+
 });
 
 document.getElementById('btn-desc').addEventListener('click', function () {
@@ -74,4 +81,6 @@ document.getElementById('btn-desc').addEventListener('click', function () {
     let textoOriginal = descriptografarTexto(textoCriptografado);
     document.getElementById('cx-exibir-txt').textContent = textoOriginal;
     exibirBotaoCopiar();
+    naoExibirImgGaroto();
+
 });

@@ -1,10 +1,10 @@
 @import url(normalize.css);
 @import url(variaveis.css);
 
-body {
+html {
     font-family: var(--fonte);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 16px;
     background-color: var(--light-blue-100);
 }
 
@@ -87,13 +87,17 @@ h2 {
     animation: shake 0.4s ease-in-out infinite;
 }
 
+.img-garoto {
+    display: none;
+}
+
 .btn-copiar {
     display: none;
     margin-top: 10px;
     width: 90%;
     background-color: var(--white);
 }
-
+/* Estilos para dispositivos maiores */
 @media screen and (min-width: 768px) {
 
     .body {
@@ -133,8 +137,29 @@ h2 {
         width: 25%;
     }
 
-    textarea::placeholder {
-        row
+    .input-cx-txt {
+        height: 36rem;
+    }
+
+    .exibir-txt {
+        height: 44rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .img-garoto {
+        display: block;
+    }
+
+    .button {
+        margin: 0 auto;
+    }
+
+    @keyframes shake {
+        0% { transform: translateY(-5px); }
+        50% { transform: translateY(5px); }
+        100% { transform: translateY(-5px); }
     }
 
 }
