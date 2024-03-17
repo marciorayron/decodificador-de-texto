@@ -39,3 +39,39 @@ function validarEExibirAviso(texto) {
     }
     return true;
 }
+
+document.getElementById('btn-copiar').addEventListener('click', function () {
+    let textoCopiado = document.getElementById('cx-exibir-txt').textContent;
+    navigator.clipboard.writeText(textoCopiado);
+
+    let cxExibirTxt = document.getElementById('cx-exibir-txt');
+    cxExibirTxt.textContent = 'Copiado!';
+    cxExibirTxt.style.fontSize = '1rem';
+
+    document.getElementById('texto').value = textoCopiado;
+});
+
+function exibirBotaoCopiar() {
+    let btnCopiar = document.getElementById('btn-copiar');
+    btnCopiar.style.display = 'inline-block';
+}
+
+document.getElementById('btn-crip').addEventListener('click', function () {
+    let texto = document.getElementById('texto').value.trim();
+    if (!validarEExibirAviso(texto)) {
+        return;
+    }
+    let textoCriptografado = criptografarTexto(texto);
+    document.getElementById('cx-exibir-txt').textContent = textoCriptografado;
+    exibirBotaoCopiar();
+});
+
+document.getElementById('btn-desc').addEventListener('click', function () {
+    let textoCriptografado = document.getElementById('texto').value.trim();
+    if (!validarEExibirAviso(textoCriptografado)) {
+        return;
+    }
+    let textoOriginal = descriptografarTexto(textoCriptografado);
+    document.getElementById('cx-exibir-txt').textContent = textoOriginal;
+    exibirBotaoCopiar();
+});
